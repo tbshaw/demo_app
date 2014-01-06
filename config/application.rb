@@ -58,5 +58,10 @@ module DemoApp
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+    
+    # TBS: I added the following code because I was getting and error
+    # The error was "rake aborted could not connect to server connection refused..."
+    # Solution found in " Rails 3.1+ Asset Pipeline on Heroku Cedar article" 
+    config.assets.initialize_on_precompile = false
   end
 end
